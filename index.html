@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<link rel="stylesheet"
+		href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script 
+		src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script 
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	
+	<link rel="stylesheet"
+		href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+	<script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="static/css/user-form.css"
+		th:href="@{/css/user-form.css}">
+	<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+	<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css">	
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+
+    <link rel="stylesheet" type="text/css" href="css/estilos.css"></link>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script  src="js/funciones.js"></script>
+        <title>Reto5</title>
+</head>
+<body>
+    <div class="container">
+        <div class="mx-auto col-sm-8 main-section" id="myTab" role="tablist">
+            <ul class="nav nav-tabs justify-content-xl-start">
+                <li class="nav-item">
+                <a class="nav-link active" id="Bike-tab" data-toggle="tab" href="#bike" role="tab" aria-controls="Bike" aria-selected="false">Bike</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" id="Category-tab" data-toggle="tab" href="#category" role="tab" aria-controls="Category" aria-selected="true">Category</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" id="Client-tab" data-toggle="tab" href="#client" role="tab" aria-controls="Client" aria-selected="true">Client</a>				   	
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="Message-tab" data-toggle="tab" href="#message" role="tab" aria-controls="Message" aria-selected="true">Message</a>				   	
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="Reservation-tab" data-toggle="tab" href="#reservation" role="tab" aria-controls="Reservation" aria-selected="true">Reservation</a>				   	
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="bike" role="tabpanel" aria-labelledby="Bike-tab">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>BIKE</h3>
+                        </div>
+                        <div class="card-body">
+                            <form class="form" role="form" autocomplete="off">
+                                <fieldset>
+                                    <legend>Brand</legend>
+                                    <input type="text" class="form-control" id="Bbrand" placeholder="Brand" required></input>
+                                    <br>
+                                    <legend>Name</legend>
+                                    <input type="text" class="form-control" id="BName" placeholder="Name" required></input>
+                                    <br>
+                                    <legend>Year</legend>
+                                    <input type="number" class="form-control" id="BYear" placeholder="Year" required></input>
+                                    <br>
+                                    <legend>Description</legend>
+                                    <input type="text" class="form-control" id="BDescription" placeholder="Description" required></input>
+                                    <br>
+                                    <legend>Category</legend>
+                                    <div id="campoCategory"></div>
+                                    <br>
+                                    <button type="button"  class="btn btn-success" onclick="traerInformacionBikes()">Mostrar Tabla</button>
+                                    <button type="button"  class="btn btn-success" onclick="guardarInformacionBikes()">Agregar</button>
+                                    <div id="botonActualizar"></div>
+                                </fieldset>
+                            </form>
+                            <br>
+                            <hr>
+                            <div id="resultado"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="category" role="tabpanel" aria-labelledby="Category-tab">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>CATEGORY</h3>
+                        </div>
+                        <div class="card-body">
+                            <form class="form" role="form" autocomplete="off">
+                                <fieldset>
+                                    <legend>Name</legend>
+                                    <input type="text" class="form-control" id="Cname" placeholder="Name"></input>
+                                    <br>
+                                    <legend>Description</legend>
+                                    <input type="text" class="form-control" id="Cdescription" placeholder="Description"></input>
+                                    <br>
+                                    <button type="button"  class="btn btn-success" onclick="traerInformacionCategory()">Mostrar Tabla</button>
+                                    <button type="button"  class="btn btn-success" onclick="guardarInformacionCategory()">Agregar</button>
+                                    <div id="botonActualizar2"></div>
+                                </fieldset>
+                            </form>
+                            <br/>
+                            <hr/>
+                            <div id="resultado2"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="client" role="tabpanel" aria-labelledby="Client-tab">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>CLIENT</h3>
+                        </div>
+                        <div class="card-body">
+                            <form class="form" role="form" autocomplete="off">
+                                <fieldset>
+                                    <legend>Name</legend>
+                                    <input type="text" class="form-control" id="Clname" placeholder="Name"></input>
+                                    <br>
+                                    <legend>Email</legend>
+                                    <input type="email" class="form-control" id="Clemail" placeholder="Email"></input>
+                                    <br>
+                                    <legend>Age</legend>
+                                    <input type="number" class="form-control" id="Clage" placeholder="Age"></input>
+                                    <br>
+                                    <legend>Password</legend>
+                                    <input type="password" class="form-control" id="Clpassword" placeholder="Password"></input>
+                                    <br>
+                                    <button type="button"  class="btn btn-success" onclick="traerInformacionClient()">Mostrar Tabla</button>
+                                    <button type="button"  class="btn btn-success" onclick="guardarInformacionClient()">Agregar</button>
+                                    <div id="botonActualizar3"></div>
+                                </fieldset>
+                            </form>
+                            <br/>
+                            <hr/>
+                            <div id="resultado3"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="message" role="tabpanel" aria-labelledby="Message-tab">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>MESSAGE</h3>
+                        </div>
+                        <div class="card-body">
+                            <form class="form" role="form" autocomplete="off">
+                                <fieldset>
+                                    <legend>Message text</legend>
+                                    <input type="text" class="form-control" id="Mtext" placeholder="Messagetext"></input>
+                                    <br>
+                                    <legend>Bike</legend>
+                                    <div id="campoBicicletasMessage"></div>
+                                    <br>
+                                    <legend>Client</legend>
+                                    <div id="campoClientMessage"></div>
+                                    <br>
+                                    <button type="button"  class="btn btn-success" onclick="traerInformacionMessage()">Mostrar Tabla</button>
+                                    <button type="button"  class="btn btn-success" onclick="guardarInformacionMessage()">Agregar</button>
+                                    <div id="botonActualizar4"></div>
+                                </fieldset>
+                            </form>
+                            <br/>
+                            <hr/>
+                        </div>
+                        <div id="resultado4"></div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="reservation" role="tabpanel" aria-labelledby="Reservation-tab">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>RESERVATION</h3>
+                        </div>
+                        <div class="card-body">
+                            <form class="form" role="form" autocomplete="off">
+                                <fieldset>
+                                    <legend>CLIENT</legend>
+                                    <div id="campoClientReservation"></div>
+                                    <br>
+                                    <legend>BIKE</legend>
+                                    <div id="campoBicicletasReservation"></div>
+                                    <br>
+                                    <legend>Start Date</legend>
+                                    <input type="date" class="form-control" id="Sdate" placeholder="Start Date"></input>
+                                    <br>
+                                    <legend>Devolution Date</legend>
+                                    <input type="date" class="form-control" id="Ddate" placeholder="Devolution Date"></input>
+                                    <br>
+                                    <button type="button"  class="btn btn-success" onclick="traerInformacionReservation()">Mostrar Tabla</button>
+                                    <button type="button"  class="btn btn-success" onclick="guardarInformacionReservation()">Agregar</button>
+                                    <div id="botonActualizar5"></div>
+                                </fieldset>
+                            </form>
+                            <hr>
+                            <br>
+                            <div id="resultado5"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
