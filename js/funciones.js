@@ -1,7 +1,7 @@
 
 function campoCategory(){
     $.ajax({
-        url:"http://129.151.112.141:8080/api/Category/all",
+        url:"http://144.22.35.115:8080/api/Category/all",
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
@@ -17,7 +17,7 @@ function campoCategory(){
 
 function campoClientMessage(){
     $.ajax({
-        url:"http://129.151.112.141:8080/api/Client/all",
+        url:"http://144.22.35.115:8080/api/Client/all",
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
@@ -33,7 +33,7 @@ function campoClientMessage(){
 
 function campoBicicletasMessage(){
     $.ajax({
-        url:"http://129.151.112.141:8080/api/Bike/all",
+        url:"http://144.22.35.115:8080/api/Bike/all",
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
@@ -49,7 +49,7 @@ function campoBicicletasMessage(){
 
 function campoClientReservation(){
     $.ajax({
-        url:"http://129.151.112.141:8080/api/Client/all",
+        url:"http://144.22.35.115:8080/api/Client/all",
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
@@ -65,7 +65,7 @@ function campoClientReservation(){
 
 function campoBicicletasReservation(){
     $.ajax({
-        url:"http://129.151.112.141:8080/api/Bike/all",
+        url:"http://144.22.35.115:8080/api/Bike/all",
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
@@ -88,7 +88,7 @@ campoCategory();
 
 function traerInformacionBikes(){
     $.ajax({
-        url:"http://129.151.112.141:8080/api/Bike/all",
+        url:"http://144.22.35.115:8080/api/Bike/all",
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
@@ -132,7 +132,7 @@ function guardarInformacionBikes(){
         dataType: 'JSON',
         data: JSON.stringify(var3),
         
-        url:"http://129.151.112.141:8080/api/Bike/save",
+        url:"http://144.22.35.115:8080/api/Bike/save",
        
         
         success:function(response) {
@@ -159,7 +159,7 @@ function limpiarCBike(){
 
 function eliminarBike(id){
     $.ajax({
-        url:"http://129.151.112.141:8080/api/Bike/"+id,
+        url:"http://144.22.35.115:8080/api/Bike/"+id,
         type:"DELETE",
         datatype:"JSON",
         success:function(respuesta){
@@ -174,7 +174,7 @@ function eliminarBike(id){
 }
 function traerBike(id){
     $.ajax({
-        url:"http://129.151.112.141:8080/api/Bike/"+id,
+        url:"http://144.22.35.115:8080/api/Bike/"+id,
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
@@ -207,7 +207,7 @@ function actualizarBike(id){
             dataType: 'JSON',
             data: JSON.stringify(var3),
             
-            url:"http://129.151.112.141:8080/api/Bike/update",
+            url:"http://144.22.35.115:8080/api/Bike/update",
            
             
             success:function(response) {
@@ -230,7 +230,7 @@ function actualizarBike(id){
 
 function traerInformacionCategory(){
     $.ajax({
-        url:"http://129.151.112.141:8080/api/Category/all",
+        url:"http://144.22.35.115:8080/api/Category/all",
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
@@ -275,7 +275,7 @@ function guardarInformacionCategory(){
         dataType: 'JSON',
         data: JSON.stringify(var3),
         
-        url:"http://129.151.112.141:8080/api/Category/save",
+        url:"http://144.22.35.115:8080/api/Category/save",
        
         
         success:function(response) {
@@ -298,7 +298,7 @@ function guardarInformacionCategory(){
 
 function eliminarCategory(id){
     $.ajax({
-        url:"http://129.151.112.141:8080/api/Category/"+id,
+        url:"http://144.22.35.115:8080/api/Category/"+id,
         type:"DELETE",
         datatype:"JSON",
         success:function(respuesta){
@@ -313,7 +313,7 @@ function eliminarCategory(id){
 
 function traerCategory(id){
     $.ajax({
-        url:"http://129.151.112.141:8080/api/Category/"+id,
+        url:"http://144.22.35.115:8080/api/Category/"+id,
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
@@ -343,7 +343,7 @@ function actualizarCategory(id){
             dataType: 'JSON',
             data: JSON.stringify(var3),
             
-            url:"http://129.151.112.141:8080/api/Category/update",
+            url:"http://144.22.35.115:8080/api/Category/update",
            
             
             success:function(response) {
@@ -365,7 +365,7 @@ function actualizarCategory(id){
 
 function traerInformacionClient(){
     $.ajax({
-        url:"http://129.151.112.141:8080/api/Client/all",
+        url:"http://144.22.35.115:8080/api/Client/all",
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
@@ -415,7 +415,7 @@ function guardarInformacionClient(){
         dataType: 'JSON',
         data: JSON.stringify(var3),
         
-        url:"http://129.151.112.141:8080/api/Client/save",
+        url:"http://144.22.35.115:8080/api/Client/save",
        
         
         success:function(response) {
@@ -438,7 +438,7 @@ function guardarInformacionClient(){
 
 function eliminarClient(id){
     $.ajax({
-        url:"http://129.151.112.141:8080/api/Client/"+id,
+        url:"http://144.22.35.115:8080/api/Client/"+id,
         type:"DELETE",
         datatype:"JSON",
         success:function(respuesta){
@@ -454,7 +454,7 @@ function eliminarClient(id){
 
 function traerClient(id){
     $.ajax({
-        url:"http://129.151.112.141:8080/api/Client/"+id,
+        url:"http://144.22.35.115:8080/api/Client/"+id,
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
@@ -488,7 +488,7 @@ function actualizarClient(id){
             dataType: 'JSON',
             data: JSON.stringify(var3),
             
-            url:"http://129.151.112.141:8080/api/Client/update",
+            url:"http://144.22.35.115:8080/api/Client/update",
            
             
             success:function(response) {
@@ -511,7 +511,7 @@ function actualizarClient(id){
 
 function traerInformacionMessage(){
     $.ajax({
-        url:"http://129.151.112.141:8080/api/Message/all",
+        url:"http://144.22.35.115:8080/api/Message/all",
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
@@ -557,7 +557,7 @@ function guardarInformacionMessage(){
         dataType: 'JSON',
         data: JSON.stringify(var3),
         
-        url:"http://129.151.112.141:8080/api/Message/save",
+        url:"http://144.22.35.115:8080/api/Message/save",
        
         
         success:function(response) {
@@ -578,7 +578,7 @@ function guardarInformacionMessage(){
 
 function eliminarMessage(id){
     $.ajax({
-        url:"http://129.151.112.141:8080/api/Message/"+id,
+        url:"http://144.22.35.115:8080/api/Message/"+id,
         type:"DELETE",
         datatype:"JSON",
         success:function(respuesta){
@@ -591,7 +591,7 @@ function eliminarMessage(id){
 
 function traerMessage(id){
     $.ajax({
-        url:"http://129.151.112.141:8080/api/Message/"+id,
+        url:"http://144.22.35.115:8080/api/Message/"+id,
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
@@ -620,7 +620,7 @@ function actualizarMessage(id){
             dataType: 'JSON',
             data: JSON.stringify(var3),
             
-            url:"http://129.151.112.141:8080/api/Message/update",
+            url:"http://144.22.35.115:8080/api/Message/update",
            
             
             success:function(response) {
@@ -641,7 +641,7 @@ function actualizarMessage(id){
 
 function traerInformacionReservation(){
     $.ajax({
-        url:"http://129.151.112.141:8080/api/Reservation/all",
+        url:"http://144.22.35.115:8080/api/Reservation/all",
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
@@ -690,7 +690,7 @@ function guardarInformacionReservation(){
         dataType: 'JSON',
         data: JSON.stringify(var3),
         
-        url:"http://129.151.112.141:8080/api/Reservation/save",
+        url:"http://144.22.35.115:8080/api/Reservation/save",
        
         
         success:function(response) {
@@ -710,7 +710,7 @@ function guardarInformacionReservation(){
 
 function eliminarReservation(id){
     $.ajax({
-        url:"http://129.151.112.141:8080/api/Reservation/"+id,
+        url:"http://144.22.35.115:8080/api/Reservation/"+id,
         type:"DELETE",
         datatype:"JSON",
         success:function(respuesta){
@@ -723,7 +723,7 @@ function eliminarReservation(id){
 
 function traerReservation(id){
     $.ajax({
-        url:"http://129.151.112.141:8080/api/Reservation/"+id,
+        url:"http://144.22.35.115:8080/api/Reservation/"+id,
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
@@ -754,7 +754,7 @@ function actualizarReservation(id){
             dataType: 'JSON',
             data: JSON.stringify(var3),
             
-            url:"http://129.151.112.141:8080/api/Reservation/update",
+            url:"http://144.22.35.115:8080/api/Reservation/update",
            
             
             success:function(response) {
